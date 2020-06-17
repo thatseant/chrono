@@ -7,7 +7,7 @@ var PATTERN = new RegExp('(\\W|^)' +
         '(?:(Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sun|Mon|Tue|Wed|Thu|Fri|Sat)\\s*,?\\s*)?' +
         '(([0-9]{1,2})(?:st|nd|rd|th)?|' + util.ORDINAL_WORDS_PATTERN + ')' +
         '(?:\\s*' +
-            '(?:to|\\-|\\–|until|through|till|\\s)\\s*' +
+            '(?:to|\\-|\\–|until|and|&|or|,|through|till|\\s)\\s*' +
             '(([0-9]{1,2})(?:st|nd|rd|th)?|' + util.ORDINAL_WORDS_PATTERN + ')' +
         ')?' + 
         '(?:-|\/|\\s*(?:of)?\\s*)' +

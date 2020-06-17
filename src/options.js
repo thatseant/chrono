@@ -60,13 +60,13 @@ exports.strictOption = function () {
 
     return exports.mergeOptions([
         exports.en(strictConfig),
-        exports.de(strictConfig),
-        exports.nl(strictConfig),
-        exports.pt(strictConfig),
-        exports.es(strictConfig),
-        exports.fr(strictConfig),
-        exports.ja(strictConfig),
-        exports.zh,
+        // exports.de(strictConfig),
+        // exports.nl(strictConfig),
+        // exports.pt(strictConfig),
+        // exports.es(strictConfig),
+        // exports.fr(strictConfig),
+        // exports.ja(strictConfig),
+        // exports.zh,
         exports.commonPostProcessing
     ]);
 };
@@ -75,13 +75,12 @@ exports.casualOption = function () {
     return exports.mergeOptions([
         exports.en.casual,
         // Some German abbriviate overlap with common English
-        exports.de({ strict: true }),
-        exports.nl,
-        exports.pt,
-        exports.es,
-        exports.fr,
-        exports.ja,
-        exports.zh,
+        // exports.nl,
+        // exports.pt,
+        // exports.es,
+        // exports.fr,
+        // exports.ja,
+        // exports.zh,
         exports.commonPostProcessing
     ]);
 };
@@ -164,7 +163,7 @@ exports.en = function(config) {
             new parser.ENSlashDateFormatStartWithYearParser(config),
             new parser.ENSlashMonthFormatParser(config),
             new parser.ENTimeAgoFormatParser(config),
-            new parser.ENTimeLaterFormatParser(config),
+            // new parser.ENTimeLaterFormatParser(config),
             new parser.ENTimeExpressionParser(config)
         ],
         refiners: [
@@ -186,9 +185,9 @@ exports.en.casual = function(config) {
 
     // en
     option.parsers.unshift(new parser.ENCasualDateParser());
-    option.parsers.unshift(new parser.ENCasualTimeParser());
+    // option.parsers.unshift(new parser.ENCasualTimeParser());
     option.parsers.unshift(new parser.ENWeekdayParser());
-    option.parsers.unshift(new parser.ENRelativeDateFormatParser());
+    // option.parsers.unshift(new parser.ENRelativeDateFormatParser());
     return option;
 };
 
